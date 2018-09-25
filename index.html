@@ -1,86 +1,573 @@
 <!DOCTYPE html>
-<html>
-
+<html class="no-js" lang="de-DE">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- PAGE settings -->
-  <title>Refactoring tech</title>
-  <meta name="description" content="Wireframe design of a product display by Pingendo">
-  <meta name="keywords" content="Pingendo bootstrap example template wireframe product">
-  <meta name="author" content="Pingendo">
-  <!-- CSS dependencies -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="wireframe.css"> </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://refactoringtest.wordpress.com/xmlrpc.php">
+<title>REFACTORING TECH &#8211; My personal blog, where I explore &amp; discuss different aspects of technology and their impact on our lives.</title>
+<script type="text/javascript">
+  WebFontConfig = {"google":{"families":["Ubuntu:r,i,b,bi:latin,latin-ext"]}};
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://s0.wp.com/wp-content/plugins/custom-fonts/js/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+	})();
+</script><style id="jetpack-custom-fonts-css">.wf-active html{font-family:"Ubuntu",sans-serif}.wf-active body, .wf-active button, .wf-active input, .wf-active select, .wf-active textarea{font-family:"Ubuntu",sans-serif}.wf-active pre{font-family:"Ubuntu",sans-serif}.wf-active code, .wf-active kbd, .wf-active tt, .wf-active var{font-family:"Ubuntu",sans-serif}.wf-active button, .wf-active input[type="button"], .wf-active input[type="reset"], .wf-active input[type="submit"]{font-family:"Ubuntu",sans-serif}.wf-active body{font-family:"Ubuntu",sans-serif}.wf-active .site-description{font-family:"Ubuntu",sans-serif}.wf-active .comment-content h5, .wf-active .entry-content h5{font-family:"Ubuntu",sans-serif}.wf-active .comment-content h6, .wf-active .entry-content h6{font-family:"Ubuntu",sans-serif}.wf-active .comment-content address, .wf-active .entry-content address{font-family:"Ubuntu",sans-serif}.wf-active .comment-content blockquote, .wf-active .entry-content blockquote{font-family:"Ubuntu",sans-serif}.wf-active .comment-content q, .wf-active .entry-content q{font-family:"Ubuntu",sans-serif}.wf-active .comment-content cite, .wf-active .entry-content cite{font-family:"Ubuntu",sans-serif}.wf-active #infinite-handle span button{font-family:"Ubuntu",sans-serif}.wf-active #infinite-handle span button:active, .wf-active #infinite-handle span button:focus, .wf-active #infinite-handle span button:hover{font-family:"Ubuntu",sans-serif}.wf-active .site-main .comment-navigation, .wf-active .site-main .post-navigation{font-family:"Ubuntu",sans-serif}@media screen and (min-width: 881px){.wf-active .site-main .post-navigation .meta-nav-title{font-family:"Ubuntu",sans-serif}}@media screen and (min-width: 881px){.wf-active .no-comments{font-family:"Ubuntu",sans-serif}}.wf-active .comment .comment-reply-title a{font-family:"Ubuntu",sans-serif}.wf-active .site-footer .site-info{font-family:"Ubuntu",sans-serif}</style>
+<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="REFACTORING TECH &raquo; Feed" href="https://refactoringtest.wordpress.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="REFACTORING TECH &raquo; Kommentar-Feed" href="https://refactoringtest.wordpress.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1532082729h&ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJx9kNFOwzAMRX+ILJsGm3hAfEuSGuo1TqLYoezvcTvoA5vyEvk69/hatnMxISeBJJaaKbF9YmI7l5DJMGGE6z+1C8xP9jHGzXOoWASzqo8cY557/jF/QTW+eR9BablG2OyYQmyDtrVhB8cj6gDeEaZ7y4Wt6P/k8/dW9HIjTgsFUlyYzKp6djdoqvGu/l5i0zcIbcqybrcVvWkhV9A+FSeLg2BABxFIbT2MyumPWspRN+/G3Fb1vlRgNvoSNjIyatDKvdPb4eV4PLyeT/vnyw8ugsML?cssminify=yes' type='text/css' media='all' />
+<style id='wpcom-admin-bar-inline-css' type='text/css'>
 
-<body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
-    <div class="container">
-      <button class="navbar-toggler navbar-toggler-right mx-auto" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse text-center justify-content-between" id="navbar2SupportedContent"> </div>
-    </div>
-  </nav>
-  <div class="py-5 text-center mx-3 mb-3" style="background-image: url('ai-art-big-data-158826.jpg'); background-size: cover;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="display-4 text-primary text-left text-uppercase">
-            <b class="text-white">Refactoring Tech</b>
-          </h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <p class="lead text-white w-50 text-left">My personal blog, where I explore &amp; discuss different aspects of technology and their impact on our lives</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="mx-auto p-5 my-5 col-md-12"> </div>
-      </div>
-      <div class="row"> </div>
-    </div>
-  </div>
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center display-3 text-primary">Technology is a way of thinking</h1>
-          <p class="">"Technology is, in its purest form, a way of thinking.“ &nbsp; &nbsp;
-            <br>
-            <br>This sentence out of the booklet 'Ethical principles for Technology‘, prepared by Dr. Matthew Beard and Dr. Simon Longstaff , caught my eye.
-            <br>I never really gave the term ‚technology‘ that much thought because I knew what I associated it with and that seemed enough for me to understand it.&nbsp;
-            <br>Technology is a tool, something material that you can grasp and use to manipulate our world with in order to serve some goal.&nbsp;
-            <br>So, in essence, it is a means to an end. &nbsp;
-            <br>
-            <br>But the authors went more into detail describing this way of thinking as seeing "the world as a set of problems to be solved, forces to be understood and measured and products to be collected, stored and used. Technological artefacts bring
-            this way of thinking into being.“ &nbsp;
-            <br>This reminded me of a T-Shirt that I saw a friend of mine wear quite frequently. It says: “The world is breaking. Come fix it!“. &nbsp;
-            <br>After coming to the conclusion that some people might just like wearing their personal convictions and beliefs on trendy T-Shirts, I realised, reminded by this excerpt of the booklet, that it had the logo of Palantir on it, a software company
-            that specializes in big data analytics. &nbsp;
-            <br>These realisations and thoughts did not just spark interest in me because their content seemed so foreign to me, but rather because it forced me to answer a question I actually did not have a clear answer to: &nbsp;
-            <br>
-            <br>What is technology?&nbsp;
-            <br>
-            <br>Surprisingly enough, this question requires a somewhat philosophical answer.&nbsp; One of the most prominent philosophers of technology, Martin Heidegger, stated that technology is "a way of revealing“. To understand his statement, we have
-            to take a look at Heidegger’s understanding of reality. He saw reality as not being absolute. Reality has to be seen in relation to time and culture, so reality is not just reality itself, but just 'reality for us‘. A particular relation to
-            reality 'reveals‘ reality in a specific way. And that is what brings us back to technology.&nbsp; Technology is a way of revealing the world where humans take power over reality. In contrast to the classic Greek understanding of 'making‘ as
-            'helping something come into being‘, technology ‚forces into being‘ and reveals our world "as raw material“.&nbsp;
-            <br>I could have gone down this rabbit hole of questions forever: &nbsp;
-            <br>What defines a way of thinking? What is a thought? What is reality? &nbsp;
-            <br>But instead I came up with my own interpretation of all these statements:
-            <br>Just as we as humans have ethical responsibilities, technological artefacts, which bring this way of thinking into being, must have ethical responsibilities. Our way of living and technology are so intertwined that it just seems natural to
-            me that we project our desire for purpose and absolute control on these tools that seem to give us the power to shape and steer our world in the direction we set.&nbsp;
-            <br>I am skeptical of a mindset that is constantly seeing problems to which we humans allegedly have to find solutions for and viewing our world as a controllable, measurable product to serve human goals. But a way of thinking that forces us to
-            understand our world, think in a creative way and apply our knowledge in order to overcome everyday problems hoping that living will be made a tiny bit easier everyday, is a way of thinking I aspire to adopt. &nbsp;
-            <br>
-            <br>So, maybe technology isn’t just my interest and passion. It’s my way of thinking. &nbsp;</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer></footer>
+			.admin-bar {
+				position: inherit !important;
+				top: auto !important;
+			}
+			.admin-bar .goog-te-banner-frame {
+				top: 32px !important
+			}
+			@media screen and (max-width: 782px) {
+				.admin-bar .goog-te-banner-frame {
+					top: 46px !important;
+				}
+			}
+			@media screen and (max-width: 480px) {
+				.admin-bar .goog-te-banner-frame {
+					position: absolute;
+				}
+			}
+		
+</style>
+<link rel='stylesheet' id='rebalance-fonts-css'  href='https://fonts.googleapis.com/css?family=Rubik%3A400%2C500%2C700%2C900%2C400italic%2C700italic%7CLibre+Baskerville%3A700%2C900%2C400italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s1.wp.com/_static/??-eJyNkEFOAzEMAD+EsSiUigPiLd7UGwJOHMXeRvy+qXphoVq4ZeQZJwr2CkGLc3H0d85sWJcJG08kVALjPIZAnU3zGu6D2R3+lZt/yT/VVMJVh16D5l9RXqDKElMx7OkY2Q15GVP9TAxCHZ1zFfKx+PatNxaYhkQCaShr2IojK4gG8qRlBTALpbaVFr08j445FZiowWm3ZY+/EY3jGHFY33ArcjVoXLU5zNryT76kb/n1Yf94ODztdy/PH2da8cES?cssminify=yes' type='text/css' media='all' />
+<style id='rebalance-style-inline-css' type='text/css'>
+.entry-tags, .entry-meta .author { clip: rect(1px, 1px, 1px, 1px); height: 1px; position: absolute; overflow: hidden; width: 1px; }
+</style>
+<link rel='stylesheet' id='print-css-3-1' href='https://s2.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1465851035h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s1.wp.com/_static/??-eJx1jEEOgzAMwD5ECYxRcUG8pZSIFjUpagL7/uCyHabdLMsyvHbjMyuyAh1mT8caWcAtFNnMrgA5USwXmXxiKXFB+brai1TwZ+E1Zr4XH/rJNSBdv/CENeXZpTuYaGz7zjbDw3bD9gYYZDqz?cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJx9kFEKwjAMQC9kVycT9yOeZavZyGyb2qQbenr7MRFHFQIh5JHkRS9BoTc2XYH1lOOeID7WVE280/8A5XCMnUDl0L9hQ17Ai3ZJBZtG9Kw59WwiBkHK1UDW0rLF8+hALA6YuxEKXUc9WlCJIWbAS75qoAL3bYB+Rigt24iChM7cVATGJ5S8OXwUfz9spS7uXDft6dDWx2Y/vQBJS4U5'></script>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1530132353h&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://refactoringtest.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel='shortlink' href='https://wp.me/ahEeU' />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="REFACTORING TECH" />
+<meta property="og:description" content="My personal blog, where I explore &amp; discuss different aspects of technology and their impact on our lives." />
+<meta property="og:url" content="https://refactoringtest.wordpress.com/" />
+<meta property="og:site_name" content="REFACTORING TECH" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="de_DE" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta property="fb:app_id" content="249643311490" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon-precomposed" href="https://s2.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://refactoringtest.wordpress.com/osd.xml" title="REFACTORING TECH" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="pinterest" content="nopin" /><meta name="theme-color" content="#ffffff" />
+<meta name="application-name" content="REFACTORING TECH" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="My personal blog, where I explore &amp; discuss different aspects of technology and their impact on our lives." /><meta name="msapplication-task" content="name=Einen Beitrag verfassen;action-uri=https://wordpress.com/post/refactoringtest.wordpress.com;icon-uri=https://s2.wp.com/i/icons/post.ico" /><meta name="msapplication-task" content="name=Kommentare moderieren;action-uri=https://refactoringtest.wordpress.com/wp-admin/edit-comments.php?comment_status=moderated;icon-uri=https://s2.wp.com/i/icons/comment.ico" /><meta name="msapplication-task" content="name=Neue Mediendatei hochladen;action-uri=https://refactoringtest.wordpress.com/wp-admin/media-new.php;icon-uri=https://s2.wp.com/i/icons/media.ico" /><meta name="msapplication-task" content="name=Blog-Statistiken;action-uri=https://refactoringtest.wordpress.com/wp-admin/index.php?page=stats;icon-uri=https://s1.wp.com/i/icons/stats.ico" /><meta name="description" content="My personal blog, where I explore &amp; discuss different aspects of technology and their impact on our lives." />
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="home blog logged-in admin-bar no-customize-support mp6 customizer-styles-applied hfeed tags-hidden author-hidden highlander-enabled highlander-light">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Zum Inhalt springen</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="col-width header-wrap">
+						<div class="site-heading">
+				<div class="site-branding">
+																<h1 class="site-title"><a href="https://refactoringtest.wordpress.com/" rel="home">REFACTORING TECH</a></h1>
+									</div><!-- .site-branding -->
+								<nav class="social-navigation" role="navigation">
+					<div class="social-menu-wrap"><ul id="menu-links-zu-sozialen-netzwerken" class="social-menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a target="_blank" href="https://www.linkedin.com/in/nahida-chiki-0aa945157/"><span>LinkedIn</span></a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a target="_blank" href="https://github.com/nchiki"><span>Github</span></a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a target="_blank" href="http://dribbble.com/automattic"><span>Website</span></a></li>
+</ul></div>				</nav><!-- #social-navigation -->
+							</div><!-- .site-heading -->
+		</div>
+		<div class="col-width sub-header-wrap">
+
+							<p class="site-description">My personal blog, where I explore &amp; discuss different aspects of technology and their impact on our lives.</p>
+			
+			
+		</div><!-- .col-width -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content clear">
+		<div class="col-width">
+
+	<div id="primary" class="content-area">
+
+		
+		<main id="main" class="site-main" role="main">
+
+		
+			
+			<div id="infinite-wrap">
+
+								
+					
+<article id="post-4" class="post-4 post type-post status-private format-standard has-post-thumbnail hentry category-allgemein card fallback-thumbnail">
+		<div class="entry-image-section">
+		<a href="https://refactoringtest.wordpress.com/2018/09/20/erster-blogbeitrag/" class="entry-image-link">
+			<figure class="entry-image">
+				<img width="560" height="181" src="https://refactoringtest.files.wordpress.com/2018/09/ersterart11.jpg?w=560" class="attachment-rebalance-archive size-rebalance-archive wp-post-image" alt="" srcset="https://refactoringtest.files.wordpress.com/2018/09/ersterart11.jpg?w=560 560w, https://refactoringtest.files.wordpress.com/2018/09/ersterart11.jpg?w=1118 1118w, https://refactoringtest.files.wordpress.com/2018/09/ersterart11.jpg?w=150 150w, https://refactoringtest.files.wordpress.com/2018/09/ersterart11.jpg?w=300 300w, https://refactoringtest.files.wordpress.com/2018/09/ersterart11.jpg?w=768 768w, https://refactoringtest.files.wordpress.com/2018/09/ersterart11.jpg?w=1024 1024w" sizes="(max-width: 560px) 100vw, 560px" data-attachment-id="32" data-permalink="https://refactoringtest.wordpress.com/2018/09/20/erster-blogbeitrag/ersterart1-2/" data-orig-file="https://refactoringtest.files.wordpress.com/2018/09/ersterart11.jpg" data-orig-size="1170,379" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="ersterArt1" data-image-description="" data-medium-file="https://refactoringtest.files.wordpress.com/2018/09/ersterart11.jpg?w=300" data-large-file="https://refactoringtest.files.wordpress.com/2018/09/ersterart11.jpg?w=1024" />			</figure>
+		</a>
+	</div>
+	
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="https://refactoringtest.wordpress.com/2018/09/20/erster-blogbeitrag/" rel="bookmark">Privat: Technology is a way of&nbsp;thinking</a></h1>	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p>&#8222;Technology is, in its purest form, a way of thinking.“      This sentence out of the booklet &#8218;Ethical principles&hellip;</p>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+		<span class="edit-link"><a class="post-edit-link" href="https://wordpress.com/post/refactoringtest.wordpress.com/4">Bearbeiten <span class="screen-reader-text">"Privat: Technology is a way of&nbsp;thinking"</span></a></span>	</footer><!-- .entry-meta -->
+</article><!-- #post-## -->
+
+				
+			</div>
+
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+	<aside id="search-1" class="widget widget_search"><h2 class="widget-title">Suchen</h2><form role="search" method="get" class="search-form" action="https://refactoringtest.wordpress.com/">
+				<label>
+					<span class="screen-reader-text">Suche nach:</span>
+					<input type="search" class="search-field" placeholder="Suche&#160;&hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Suche" />
+			</form></aside><aside id="blog_subscription-3" class="widget widget_blog_subscription"><h2 class="widget-title"><label for="subscribe-field">Blog per E-Mail folgen</label></h2>
+				<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="subscribe-blog">
+											<p>Klicke hier, um diesem Blog zu folgen und Benachrichtigungen über neue Beiträge per E-Mail zu erhalten.</p>
+					
+					<p>
+						<input type="hidden" name="action" value="subscribe"/>
+						<input type="hidden" name="blog_id" value="151969620"/>
+						<input type="hidden" name="source" value="https://refactoringtest.wordpress.com/"/>
+						<input type="hidden" name="sub-type" value="widget"/>
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-3" />
+						<input type="hidden" id="_wpnonce" name="_wpnonce" value="f438c8799c" />						<input type="submit" value="Folgen" />
+					</p>
+				</form>
+			
+</aside><aside id="google_translate_widget-3" class="widget widget_google_translate_widget"><h2 class="widget-title">Übersetzen</h2><div id="google_translate_element"></div></aside></div><!-- #secondary -->
+
+			<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info">
+					<a href="https://wordpress.com/?ref=footer_blog">Bloggen auf WordPress.com.</a>
+					<br>
+									</div><!-- .site-info -->
+			</footer><!-- #colophon -->
+
+		</div><!-- .col-width -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+<!--  -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+		jQuery(document).ready( function($) {
+			function doFollowingHover() {
+				$('#wp-admin-bar-follow > a').unbind( '.unfollow' );
+
+				$('#wp-admin-bar-follow > a').bind( 'mouseover.unfollow', function() {
+
+					$(this).html( "Nicht mehr folgen" ).parent( 'li' ).addClass( 'unfollow' );
+				});
+				$('#wp-admin-bar-follow > a').bind( 'mouseout.unfollow', function() {
+					$(this).html( "Du folgst" ).parent( 'li' ).removeClass( 'unfollow' );
+				});
+			}
+							doFollowingHover();
+			
+			$('#wp-admin-bar-follow > a').click( function( e ) {
+				$('#wp-admin-bar-follow > a').unbind( '.unfollow' );
+
+				e.preventDefault();
+
+				var link = $( this ), li = $( '#wp-admin-bar-follow' ), timeout = 0;
+
+				if ( li.hasClass( 'subscribed' ) ) {
+					li.removeClass( 'subscribed' ).removeClass( 'unfollow' );
+					link.html( "Folgen" );
+
+					$('body').append( $( 'div.wpcom-bubble' ).removeClass( 'fadein' ) ).off( 'click.bubble' );
+
+					var action = 'ab_unsubscribe_from_blog';
+				} else {
+					li.addClass( 'subscribed' ).removeClass( 'unfollow' );
+					link.html( "Du folgst" );
+
+						var left = 131 - link.width();
+						li.append( $( 'div.wpcom-bubble' ).css( { left: '-' + left + 'px' } ) );
+						$( 'div.bubble-txt', 'div.wpcom-bubble' ).html( "Neue Beitr\u00e4ge dieses Blogs werden nun in <a target=\"_blank\" href=\"http:\/\/de.wordpress.com\/\">deinem Reader<\/a> erscheinen. Du kannst E-Mail Benachrichtigungen auf deiner <a target=\"_blank\" href=\"http:\/\/de.wordpress.com\/following\/edit\/\">Abonnements Seite<\/a> verwalten." );
+
+						$( 'div.wpcom-bubble.action-bubble' ).addClass( 'fadein' );
+
+						setTimeout( function() {
+							$('body').on( 'click.bubble touchstart.bubble', function(e) {
+								if ( !$(e.target).hasClass('wpcom-bubble') && !$(e.target).parents( 'div.wpcom-bubble' ).length )
+									hideBubble();
+							});
+							setTimeout( hideBubble, 15000 );
+						}, 500 );
+
+					var action = 'ab_subscribe_to_blog';
+					$('#wp-admin-bar-follow > a').bind( 'mouseout.shift', function() {
+						doFollowingHover();
+						$(this).unbind( '.shift' );
+					});
+				}
+
+				var nonce = link.attr( 'href' ).split( '_wpnonce=' );
+				nonce = nonce[1];
+
+				$.post( "https:\/\/refactoringtest.wordpress.com\/wp-admin\/admin-ajax.php", {
+					'action': action,
+					'_wpnonce': nonce,
+					'source': 'admin_bar',
+					'blog_id': 151969620				});
+			});
+		});
+	/* ]]> */
+	</script>
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201839y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":"943e3fca260db69da124df03148f047d"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<div id="report-form-window" style="display:none;"></div><script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Anmelden \u2026","submittingText":"Sende Kommentar \u2026","postCommentText":"Kommentar absenden","connectingToText":"Verbinde mit %s","commentingAsText":"%1$s: Du kommentierst mit Deinem %2$s-Konto. ","logoutText":"Abmelden","loginText":"Anmelden","connectURL":"https:\/\/refactoringtest.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/refactoringtest.wordpress.com\/wp-login.php?action=logout&_wpnonce=b34861da5e","homeURL":"https:\/\/refactoringtest.wordpress.com\/","postID":"4","gravDefault":"identicon","enterACommentError":"Bitte gib einen Kommentar ein","enterEmailError":"Bitte hier deine E-Mail-Adresse eingeben","invalidEmailError":"Ung\u00fcltige E-Mail-Adresse","enterAuthorError":"Bitte hier deinen Namen eingeben","gravatarFromEmail":"Dieses Bild wird angezeigt, wenn Du einen Kommentar hinterl\u00e4sst. Klicken, um es anzupassen.","logInToExternalAccount":"Melde dich an, um Details von einem dieser Konten zu verwenden.","change":"\u00c4ndern","changeAccount":"Konto \u00e4ndern","comment_registration":"0","userIsLoggedIn":"1","isJetpack":"","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1521806916j'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"N\u00e4chste >","prev":"< Vorherige","image":"Bild","of":"von","close":"Schlie\u00dfen","noiframes":"Diese Funktion ben\u00f6tigt iframes. Du hast jedoch iframes deaktiviert oder dein Browser unterst\u00fctzt diese nicht.","loadingAnimation":"https:\/\/s2.wp.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rebalanceScreenReaderText = {"expand":"Untermen\u00fc anzeigen","collapse":"Untermen\u00fc verbergen"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var Rebalance = {"is_rtl":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpNotesArgs = {"cacheBuster":"2.2.3-0-g4c6e18c","iframeUrl":"https:\/\/widgets.wp.com\/notifications\/","iframeAppend":"2","iframeScroll":"no","wide":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcom_tos_report_form = {"ajaxurl":"\/wp-admin\/admin-ajax.php","isLoggedoutUser":"","post_ID":null,"current_url":"https:\/\/refactoringtest.wordpress.com","report_this_content":"Melde diesen Inhalt"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var actionbardata = {"siteID":"151969620","siteName":"REFACTORING TECH","siteURL":"http:\/\/refactoringtest.wordpress.com","icon":"<img alt='' src='https:\/\/s2.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"1","canCustomizeSite":"1","isFollowing":"1","themeSlug":"pub\/rebalance","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/refactoringtest.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Frefactoringtest.wordpress.com%2F2018%2F09%2F20%2Ferster-blogbeitrag%2F","themeURL":"https:\/\/wordpress.com\/theme\/rebalance\/","xhrURL":"https:\/\/refactoringtest.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"d6d072a5a4","isSingular":"","isFolded":"","isLoggedIn":"1","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f438c8799c\" \/>","referer":"https:\/\/refactoringtest.wordpress.com\/","canFollow":"1","feedID":"87809217","statusMessage":"","customizeLink":"https:\/\/refactoringtest.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Frefactoringtest.wordpress.com%2F","i18n":{"view":"Webseite ansehen","follow":"Folgen","following":"Du folgst","edit":"Bearbeiten","login":"Anmelden","signup":"Registrieren","customize":"Anpassen","report":"Melde diesen Inhalt","themeInfo":"Get help setting up your theme","shortlink":"Kurzlink kopieren","copied":"Kopiert","followedText":"Neue Beitr\u00e4ge von dieser Website erscheinen nun in deinem <a href=\"https:\/\/wordpress.com\/\">Reader<\/a>.","foldBar":"Diese Leiste einklappen","unfoldBar":"Diese Leiste aufklappen","editSubs":"Abonnements verwalten","viewReader":"Website im Reader anzeigen","viewReadPost":"Beitrag im Reader lesen","subscribe":"Anmelden","enterEmail":"Gib deine E-Mail-Adresse ein","followers":"","alreadyUser":"Du hast bereits ein WordPress.com-Konto? <a href=\"https:\/\/refactoringtest.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Frefactoringtest.wordpress.com%2F2018%2F09%2F20%2Ferster-blogbeitrag%2F\">Melde dich jetzt an.<\/a>","stats":"Statistik"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wp_google_translate_widget = {"lang":"de","layout":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJyVUltSwzAMvBCuBwpT+GA4i2OriRpbCpadlttjM9PQadMQfvyQdldPfRyUZUpASR9EOxjRwnDaHORBFxeS9dmBVF/q0PYNn6bHGXTmh6wGn1sk0R77QvrMkKEz5DzEOUXjApJqTNyUe0FtwhW/5aB+eVec1EEo0kNudITGeEMWaiDLPgfyKGktg8yIrUnINJc4BtOCeDYO3GXul5hghCl+zZV2L6jYiEOS1fAeB+WRerVnm0XtcWkkR3QtJNGQi5d7BOXNUScIgzcJruxzBWVyEMVyhHslN6buBcFczbUjWZKxHSwkSVxT+TmLOwQmNT79iZ/2YRmcWFSEgWMqDYvh+r9qActUE8QaikeIEWvlk+2fCimWft1M+5Jk6wJW0vRaMeCWufVQ1UnqaG8MReMjvD++bLevu7ft7vnwDQvWgMA='></script>
+<script type='text/javascript' src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&#038;ver=4.9.8'></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?56" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['identifyUser', 145051065, 'refactoringtest']);
+_tkq.push(['storeContext', {'blog_id':'151969620','blog_tz':'2','user_lang':'de','blog_lang':'de'}]);
+_stq.push(['view', {'blog':'151969620','v':'wpcom','tz':'2','user':'1','priv':'1','user_id':'145051065','subd':'refactoringtest'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1zNDZ8S252Wis9XUQyb3YrcUVIU2R0VH5TdUlSYmNEVlB+cFl5VFI2ekxdL2dfR3AxV1ZFZzFvdVo/MUU0WyxMUWgzfkd4R1ZNY0ZqbnY3Y3hqUXQ2QU9WfDJDVTRHcnNJT3pBTVp1b058dnxsdU1kRVFsLjl4W3V5MVRKX1N4cmtacmdnTzZ3aCZbb0l4JVlMdGZ6W1h1SFFsd2cudlRIYVQvY1tWc0pBTU1vPWZHMjlGZDFZald3WUVqMXU9cWU3OX5HdkdhcXZEa2VKdXwzW3J+NTNrSWc4MC5vWlljRDBmXT1jdTUxRmY9VzlMRD9Ec1RhJl9QaFcxSkRiOEoxNTJkN1osakJMTS58Wz12Z2ZaT3VxNUNDOUdlWH4='}]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+		<div id="wpadminbar" class="nojq nojs ltr">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Zur Werkzeugleiste springen</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Werkzeugleiste" tabindex="0">
+						<ul id="wp-admin-bar-root-default" class="ab-top-menu">
+			
+		<li id="wp-admin-bar-blog" class="menupop my-sites mb-trackable"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/stats/refactoringtest.wordpress.com">Meine Website</a>			<div class="ab-sub-wrapper">		<ul id="wp-admin-bar-blog-default" class="ab-submenu">
+			
+		<li id="wp-admin-bar-blog-info" class="current-site private"><a class="ab-item"  href="https://refactoringtest.wordpress.com/"><div class="ab-site-icon"></div><span class="ab-site-title">REFACTORING TECH</span><span class="ab-site-description">refactoringtest.wordpress.com</span></a>		</li>
+		<li id="wp-admin-bar-blog-stats" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/stats/refactoringtest.wordpress.com">Statistik <img style="width: 95px; margin: 0; float: right;" src="https://refactoringtest.wordpress.com/wp-includes/charts/admin-bar-hours-scale-2x.php?masterbar=1" alt="Statistik" title="Zeigt die Seitenaufrufe pro Stunde der letzten 48 Stunden. Klicke hier um die gesamte Statistik der Website zu sehen." /></a>		</li>
+		<li id="wp-admin-bar-activity" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/activity-log/refactoringtest.wordpress.com">Aktivität</a>		</li>
+		<li id="wp-admin-bar-plan" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/plans/refactoringtest.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-plan">Tarif</a><a href="https://wordpress.com/plans/refactoringtest.wordpress.com" class="ab-secondary" id="wp-admin-bar-plan-badge">Free</a></div>		</li>		</ul>
+			<ul id="wp-admin-bar-publish" class="ab-submenu">
+			
+		<li id="wp-admin-bar-publish-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Verwalten</div>		</li>
+		<li id="wp-admin-bar-new-page" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/pages/refactoringtest.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-edit-page">Seiten</a><a href="https://wordpress.com/page/refactoringtest.wordpress.com" class="ab-secondary" id="wp-admin-bar-new-page-badge">Hinzufügen</a></div>		</li>
+		<li id="wp-admin-bar-new-post" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/posts/refactoringtest.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-edit-post">Blogbeiträge</a><a href="https://wordpress.com/post/refactoringtest.wordpress.com" class="ab-secondary" id="wp-admin-bar-new-post-badge">Hinzufügen</a></div>		</li>
+		<li id="wp-admin-bar-new-attachment" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/media/refactoringtest.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-edit-attachment">Medien</a><a href="https://wordpress.com/media/refactoringtest.wordpress.com" class="ab-secondary" id="wp-admin-bar-new-attachment-badge">Hinzufügen</a></div>		</li>
+		<li id="wp-admin-bar-new-jetpack-portfolio" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/types/jetpack-portfolio/refactoringtest.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-edit-jetpack-portfolio">Projekte</a><a href="https://refactoringtest.wordpress.com/wp-admin/post-new.php?post_type=jetpack-portfolio" class="ab-secondary" id="wp-admin-bar-new-jetpack-portfolio-badge">Hinzufügen</a></div>		</li>
+		<li id="wp-admin-bar-comments" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/comments/refactoringtest.wordpress.com">Kommentare</a>		</li>		</ul>
+			<ul id="wp-admin-bar-look-and-feel" class="ab-submenu">
+			
+		<li id="wp-admin-bar-look-and-feel-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Personalisieren</div>		</li>
+		<li id="wp-admin-bar-themes" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://refactoringtest.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Frefactoringtest.wordpress.com%2F" class="ab-item ab-primary mb-icon" id="wp-admin-bar-cmz">Anpassen</a><a href="https://wordpress.com/themes/refactoringtest.wordpress.com" class="ab-secondary" id="wp-admin-bar-themes">Themes</a></div>		</li>		</ul>
+			<ul id="wp-admin-bar-configuration" class="ab-submenu">
+			
+		<li id="wp-admin-bar-configuration-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Konfigurieren</div>		</li>
+		<li id="wp-admin-bar-sharing" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/sharing/refactoringtest.wordpress.com">Teilen</a>		</li>
+		<li id="wp-admin-bar-users-toolbar" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/people/team/refactoringtest.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-people">Personen</a><a href="https://wordpress.com/people/new/refactoringtest.wordpress.com" class="ab-secondary" id="wp-admin-bar-people-add">Hinzufügen</a></div>		</li>
+		<li id="wp-admin-bar-plugins"><a class="ab-item"  href="https://wordpress.com/plugins/wpcom-masterbar-redirect/refactoringtest.wordpress.com">Plugins</a>		</li>
+		<li id="wp-admin-bar-domains" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/domains/refactoringtest.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-domains">Domains</a><a href="https://wordpress.com/domains/add/refactoringtest.wordpress.com" class="ab-secondary" id="wp-admin-bar-domains-add">Hinzufügen</a></div>		</li>
+		<li id="wp-admin-bar-blog-settings" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/settings/general/refactoringtest.wordpress.com">Einstellungen</a>		</li>
+		<li id="wp-admin-bar-new-site"><a class="ab-item"  href="https://wordpress.com/start/de?ref=admin-bar-logged-in">+ Neues WordPress hinzufügen</a>		</li>		</ul>
+	</div>		</li>
+		<li id="wp-admin-bar-jumptotop-button-menu"><a class="ab-item"  href="#"><div id="jumptotop"><span class="noticon noticon-top"></span></div></a>		</li>
+		<li id="wp-admin-bar-newdash" class="menupop mb-trackable"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/">Reader</a>			<div class="ab-sub-wrapper">		<ul id="wp-admin-bar-newdash-default" class="ab-submenu">
+			
+		<li id="wp-admin-bar-streams-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Streams</div>		</li>
+		<li id="wp-admin-bar-following" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/" class="ab-item ab-primary mb-icon" id="wp-admin-bar-followed-sites">Abonnierte Websites</a><a href="https://wordpress.com/following/edit" class="ab-secondary" id="wp-admin-bar-reader-followed-sites-manage">Verwalten</a></div>		</li>
+		<li id="wp-admin-bar-conversations" class="mb-icon"><a class="ab-item"  href="http://wordpress.com/read/conversations">Unterhaltungen</a>		</li>
+		<li id="wp-admin-bar-discover-discover" class="mb-icon-spacer"><a class="ab-item"  href="https://wordpress.com/discover">Entdecken</a>		</li>
+		<li id="wp-admin-bar-discover-search" class="mb-icon-spacer"><a class="ab-item"  href="https://wordpress.com/read/search">Suchen</a>		</li>
+		<li id="wp-admin-bar-my-activity-my-likes" class="mb-icon-spacer"><a class="ab-item"  href="https://wordpress.com/activities/likes">Meine Likes</a>		</li>		</ul>
+	</div>		</li>		</ul>
+			<ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+			
+		<li id="wp-admin-bar-notes" class="menupop">		<div class="ab-item ab-empty-item" ><span id="wpnt-notes-unread-count" class="wpnt-loading wpn-read"></span><span class="noticon noticon-bell"></span><span class="ab-text">Benachrichtigungen</span></div><div id="wpnt-notes-panel2" style="display:none" lang="de" dir="ltr"><div class="wpnt-notes-panel-header"><span class="wpnt-notes-header"></span><span class="wpnt-notes-panel-link"></span></div></div>		</li>
+		<li id="wp-admin-bar-my-account" class="menupop with-avatar mb-trackable"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/me/"><img alt='' src='https://0.gravatar.com/avatar/943e3fca260db69da124df03148f047d?s=32&#038;d=mm&#038;r=G' class='avatar avatar-32' height='32' width='32' /><span class="ab-text">Ich</span></a>			<div class="ab-sub-wrapper">		<ul id="wp-admin-bar-user-actions" class="ab-submenu">
+			
+		<li id="wp-admin-bar-user-info" class="user-info user-info-item">		<div class="ab-item ab-empty-item" tabindex="-1"><img alt='' src='https://0.gravatar.com/avatar/943e3fca260db69da124df03148f047d?s=128&#038;d=mm&#038;r=G' class='avatar avatar-128' height='128' width='128' /><span class="display-name">refactoringtest</span><a class="username" href="http://gravatar.com/refactoringtest">@refactoringtest</a><form action="https://refactoringtest.wordpress.com/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Fwordpress.com%2F&amp;_wpnonce=b34861da5e" method="post"><button class="ab-sign-out" type="submit">Abmelden</button></form></div>		</li>
+		<li id="wp-admin-bar-profile-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Profil</div>		</li>
+		<li id="wp-admin-bar-my-profile" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me">Mein Profil</a>		</li>
+		<li id="wp-admin-bar-account-settings" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me/account">Kontoeinstellungen</a>		</li>
+		<li id="wp-admin-bar-billing" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me/purchases">Käufe verwalten</a>		</li>
+		<li id="wp-admin-bar-security" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me/security">Sicherheit</a>		</li>
+		<li id="wp-admin-bar-notifications" class="mb-icon mb-trackable"><a class="ab-item"  href="https://wordpress.com/me/notifications">Benachrichtigungen</a>		</li>
+		<li id="wp-admin-bar-special-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Extra</div>		</li>
+		<li id="wp-admin-bar-get-apps" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me/get-apps">App herunterladen</a>		</li>
+		<li id="wp-admin-bar-help" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/help">Hilfe</a>		</li>		</ul>
+	</div>		</li>
+		<li id="wp-admin-bar-ab-new-post" class="mb-trackable"><a class="ab-item"  href="https://wordpress.com/post/refactoringtest.wordpress.com"><span>Schreiben</span></a>		</li>		</ul>
+				</div>
+							<a class="screen-reader-shortcut" href="https://refactoringtest.wordpress.com/wp-login.php?action=logout&#038;_wpnonce=b34861da5e">Abmelden</a>
+					</div>
+
+	
+<script type="text/javascript">
+/* <![CDATA[ */
+var clickDebugLink;
+
+jQuery(document).ready( function($) {
+	var single = false, w = 1000,
+		supe = false;
+
+	$(document.body).load(function(){ $('#wpadminbar img.grav-hashed').removeClass('grav-hashed'); }); // hack to hide the gravatar hovercard
+
+	if ( single && supe )
+		w = 1385;
+	else if ( supe )
+		w = 1200;
+
+	// debug bar extra
+	clickDebugLink = function( parent_id, obj ) {
+
+		$('#'+parent_id).children('div').hide();
+
+		document.getElementById( obj.href.substr( obj.href.indexOf( '#' ) + 1 ) ).style.display = 'block';
+		$( obj.href.substr( obj.href.indexOf( '#' ) ) ).show()
+
+		$(obj).parent().addClass('current').siblings('li').removeClass('current');
+
+		return false;
+	};
+
+	$( '#wpadminbar #wp-admin-bar-shortlink' ).click( function() {
+		$( '#adminbar-shortlink-input' ).select();
+	});
+
+	// skip tap-to-hover on site switcher for mobile
+	if ( 'ontouchstart' in window ) {
+		$('#wp-admin-bar-switch-site').on( 'touchstart', function( event ) {
+			if ( $( window ).width() > 782 ) {
+				return;
+			}
+			event.stopPropagation();
+			$( event.target ).first( 'a' ).click();
+		});
+	}
+
+});
+/* ]]> */
+</script>
+	<div class="wpcom-bubble action-bubble">
+		<div class="bubble-txt"></div>
+	</div>
+	<script type="text/javascript">function hideBubble() { jQuery('body').append( jQuery( 'div.wpcom-bubble' ).removeClass( 'fadein' ) ).off( 'click.bubble touchstart.bubble' ); jQuery(document).off( 'scroll.bubble' ); };</script>
+		<script type="text/javascript">
+	jQuery( '#wp-admin-bar-jumptotop-button-menu a' ).click( function( e ) {
+		e.preventDefault();
+		jQuery( 'html, body' ).animate( { scrollTop: 0 }, 'fast' );
+	} );
+	function hideShowTbJumpToTop() {
+		var total_width = 0;
+		// Calculate total width taken by items minus our button to see if it'll
+		// overlap with other toolbar menus.
+		jQuery( '#wp-admin-bar-root-default > li' ).each( function() {
+			var self = jQuery( this );
+			if ( 'wp-admin-bar-jumptotop-button-menu' != self.attr( 'id' ) )
+				total_width += self.width();
+		});
+		if ( jQuery( '#wp-admin-bar-jumptotop-button-menu' ).position()['left'] - total_width < 10 ) {
+			jQuery( '#jumptotop' ).animate( { 'top': '-50px' }, 'fast' );
+		} else if (  jQuery( window ).scrollTop() >= 350 && parseInt( jQuery( '#jumptotop' ).css( 'top' ) ) < 0 ) {
+			if ( jQuery( '#wp-admin-bar-jumptotop-button-menu' ).position()['left'] - total_width < 10 )
+			   return;
+			jQuery( '#jumptotop' ).animate( { 'top': 0 }, 'fast' );
+		} else if (  jQuery( window ).scrollTop() < 1 && parseInt( jQuery( '#jumptotop' ).css( 'top' ) ) >= 0 ) {
+			jQuery( '#jumptotop' ).animate( { 'top': '-50px' }, 'fast' );
+		}
+	}
+	// handle on page load if auto scrolling to a position
+	hideShowTbJumpToTop();
+	// bind to scrolll event
+	var jumpToTopTimer = null;
+	jQuery( window ).scroll( function() {
+		clearTimeout( jumpToTopTimer );
+		jumpToTopTimer = setTimeout( jumpToTopRefresh, 150 );
+	} );
+	var jumpToTopRefresh = function() {
+		hideShowTbJumpToTop();
+	};
+	</script>
+	<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
 </body>
-
 </html>
