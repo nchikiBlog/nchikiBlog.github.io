@@ -159,7 +159,7 @@ img.emoji {
 
 
 <div id="secondary" class="widget-area" role="complementary">
-	<aside id="search-1" class="widget widget_search"><h2 class="widget-title">Suchen</h2><form role="search" method="get" class="search-form" action="https://refactoringtest.wordpress.com/">
+	<aside id="search-1" class="widget widget_search"><h2 class="widget-title"></h2><form role="search" method="get" class="search-form" action="https://refactoringtest.wordpress.com/">
 				<label>
 					<span class="screen-reader-text">Search for:</span>
 					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
@@ -203,26 +203,6 @@ var WPGroHo = {"my_hash":""};
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
-
-	<script>
-		//initialize and attach hovercards to all gravatars
-		jQuery( document ).ready( function( $ ) {
-
-			if (typeof Gravatar === "undefined"){
-				return;
-			}
-
-			if ( typeof Gravatar.init !== "function" ) {
-				return;
-			}			
-
-			Gravatar.profile_cb = function( hash, id ) {
-				WPGroHo.syncProfileData( hash, id );
-			};
-			Gravatar.my_hash = WPGroHo.my_hash;
-			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
-		});
-	</script>
 
 		<div style="display:none">
 	</div>
